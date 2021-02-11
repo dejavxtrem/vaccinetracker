@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './WelcomeScreen.css'
-import { Form,ProgressBar} from 'react-bootstrap'
+import { Form,ProgressBar, Button} from 'react-bootstrap'
 
 const WelcomeScreenOne = () => {
 
@@ -65,6 +65,10 @@ const WelcomeScreenOne = () => {
 
                 <ProgressBar now={10} className="progressbar"/>
           </div>
+
+                <Button bsPrefix="buttonstyle">
+                    Next
+                </Button>
         </div>
     )
 }
