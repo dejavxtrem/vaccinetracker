@@ -1,0 +1,42 @@
+.HomeScreen {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    
+}
+
+.fgroup {
+    margin-bottom: 3rem;
+}
+
+.firstColumn {
+    margin-bottom: 10%;
+}
+
+
+ .headerClass{
+   
+    margin-bottom: 20%;
+}
+.buttonClass {
+    margin-top: 10%;
+    width: 325px;
+    height: 47px;
+    margin-left: 60px;
+}
+
+.forgotPassword {
+    display: flex;
+    justify-content: center;
+}
+
+.imageClass {
+    margin-bottom: 5%;
+    height: 100%;
+    width: 100%;
+}
