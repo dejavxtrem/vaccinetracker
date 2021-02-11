@@ -14,9 +14,10 @@ const HomeScreen = ({history}) => {
     }
 
     return (
+
         <Col md={6} className="HomeScreen">
         <Col md={12} >
-            <div className="_header">
+            <div className="_headerone">
 
          <Image src={logo} rounded  rounded className="_image"/>
         <h1 className="headerClass">Vaccine Tracker</h1>

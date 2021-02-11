@@ -58,8 +58,11 @@
     width: 120px;
     margin: auto;
 }
-._header{
+._headerone{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+  
 }
 ._footer{
     text-align: center;

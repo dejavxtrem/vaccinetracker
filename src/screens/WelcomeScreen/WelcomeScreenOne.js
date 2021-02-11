@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import "./WelcomeScreen.css";
 import { Form, ProgressBar, Button } from "react-bootstrap";
 import BackIcon from "./icons8-back-64.png";
-const WelcomeScreenOne = () => {
+import { Link } from 'react-router-dom'
+
+const WelcomeScreenOne = ({history}) => {
   const [choice, setChoice] = useState("PayPal");
+
+
+  const nextButton = (e) => {
+    console.log('working')
+    history.push("/onboardingTwo")
+  }
   return (
     <div className="displayOn">
       <div>
@@ -58,11 +66,30 @@ const WelcomeScreenOne = () => {
         </Form>
 
         <ProgressBar now={10} className="progressbar" />
-      </div>
-      <div className="_next_btn_footer">
 
-      <Button bsPrefix="buttonstyle">Next</Button>
+
       </div>
+
+
+
+       
+       <div className="_next_btn_footer">
+     
+      <Button bsPrefix="buttonstyle"
+       type="button"
+       onClick={nextButton}
+      >
+        Next
+        
+    </Button>
+
+      </div>
+       
+       
+
+
+
+
     </div>
   );
 };
