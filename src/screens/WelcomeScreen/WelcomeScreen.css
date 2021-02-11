@@ -17,29 +17,27 @@
 }
 
 .formControl {
-    margin-top:  270.17px;
     background-color:#F0F3FA;
     height: 424.39px;
     width: 814px;
     position: absolute;
     border-radius: 39px;
+
 }
 
 .formPrefix {
-font-family: "Avenir";
-font-style: normal;
-font-weight: 900;
-font-size: 24px;
-line-height: 32px;
-display: flex;
-align-items: center;
-text-align: center;
-flex-direction: row;
-width: 385.16px;
-height:94.51px;
-margin-left: 150px;
-margin-top: 21.48px
+    width: 814px;
+    height: 424.39px;
+    border-radius: 39px;
+    box-shadow: -4px 4px 16px;
+    margin-top: 70.17px;
+    background: #F0F3FA;
+}
 
+
+.formLabel {
+    margin-top: 21.48px;
+    text-align: center;
 }
 
 div.formCheck {
@@ -47,11 +45,9 @@ font-family: Avenir;
 font-style: normal;
 font-weight: normal;
 font-size: 24px;
-
-display: flex;
 align-items: center;
-text-align: center;
-flex-direction: column;
+margin-left: 200px;
+margin-top: 20px;
 
 }
 
@@ -59,4 +55,22 @@ input[type=radio] {
     box-sizing: border-box;
     padding: 0px;
     margin-right: 30px;
+}
+
+.displayOn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%
+
+}
+
+.progressbar {
+box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.15);
+border-radius: 39px;
+transform: matrix(1, 0, 0, -1, 0, 0);
+width: 539.19px;
+margin-top: 50PX;
+margin-left: 70PX;
 }

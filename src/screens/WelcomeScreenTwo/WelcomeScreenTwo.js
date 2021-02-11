@@ -1,23 +1,24 @@
 import React, {useState} from 'react'
-import './WelcomeScreen.css'
-import { Form,ProgressBar} from 'react-bootstrap'
+import './WelcomeScreenTwo.css'
+import { Form} from 'react-bootstrap'
 
-const WelcomeScreenOne = () => {
 
-    const [choice, setChoice] = useState('PayPal')
+
+const WelcomeScreenTwo = () => {
+
     return (
-        <div className="displayOn">
-        <div >
+       <>
+        <div>
         <h1 >Hi Jenni</h1>
         <p> This survey will help your employer plan a safe return to the office</p>
-        </div>
 
-        <div className="formPrefix">
+          <div>
+          <div  className="formControl">
           <Form>
                 <Form.Label
                         as='legend'
-                        className="formLabel"
-                          >
+                        bsPrefix="formPrefix"
+                    >
                     Are you planning on getting vaccinated for COVID-19?
                     </Form.Label>
 
@@ -30,7 +31,7 @@ const WelcomeScreenOne = () => {
                             value='Yes'
                             checked
                             //onChange={(e) => setPaymentMethod(e.target.value)}
-                            className="formCheck"
+                            bsPrefix="formCheck"
                         >
                             
                         </Form.Check >
@@ -43,7 +44,7 @@ const WelcomeScreenOne = () => {
                             value='No'
                             checked
                             //onChange={(e) => setPaymentMethod(e.target.value)}
-                            className="formCheck"
+                            bsPrefix="formCheck"
                         >
                             
                         </Form.Check>
@@ -56,17 +57,20 @@ const WelcomeScreenOne = () => {
                             value='Undecided'
                             checked
                             //onChange={(e) => setPaymentMethod(e.target.value)}
-                            className="formCheck"
+                            bsPrefix="formCheck"
                         >
                             
                         </Form.Check>
+
                 </Form>
-
-
-                <ProgressBar now={10} className="progressbar"/>
           </div>
+
+          </div>
+          
         </div>
+
+       </>
     )
 }
 
-export default WelcomeScreenOne
+export default WelcomeScreenTwo
