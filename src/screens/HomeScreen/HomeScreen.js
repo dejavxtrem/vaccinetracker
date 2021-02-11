@@ -2,7 +2,7 @@ import React , {useState, useEffect} from 'react'
 import FormContainer from '../../components/FormContainer'
 import {Container, Row, Col, Form, Button, Image} from 'react-bootstrap'
 import './HomeScreen.css'
-
+import logo from './Finallogo.png'
 const HomeScreen = ({history}) => {
 
     const [email, setEmail] = useState('')
@@ -14,17 +14,15 @@ const HomeScreen = ({history}) => {
     }
 
     return (
-        <Row className="HomeScreen">
+        <Col md={6} className="HomeScreen">
+        <Col md={12} >
+            <div className="_header">
 
-        <Col md={6} bsPrefix="firstColumn">
-         <Image src="Finallogo.png" rounded  rounded/>
+         <Image src={logo} rounded  rounded className="_image"/>
         <h1 className="headerClass">Vaccine Tracker</h1>
-        </Col>
+            </div>
 
-
-        <Col md={6}>
-
-        <Form onSubmit={submitHandler}>
+        <Form onSubmit={submitHandler} >
                     <Form.Group controlId='email' bsPrefix="fgroup" >
                         <Form.Label>Email Address</Form.Label>
                             <Form.Control
@@ -50,7 +48,14 @@ const HomeScreen = ({history}) => {
                             </Form.Control>
                     </Form.Group>
 
-                    <p className="forgotPassword"> forgot password</p>
+                    <p className="forgotPassword"> 
+                    <span className="_forgot_txt">
+                    
+                    Forgot password
+                    </span>
+                    </p>
+                    <div className="_footer">
+
 
                     <Button
                     type="submit"
@@ -59,11 +64,12 @@ const HomeScreen = ({history}) => {
                     >
                         Login In
                     </Button>
+                        </div>
                 </Form>
         </Col>
         
   
-        </Row>
+        </Col>
 
        
 
