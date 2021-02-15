@@ -20,52 +20,75 @@ const WelcomeScreenTwo = () => {
           </p>
         </div>
   
-        <div className="formPrefix">
+        <div className="formPrefix2">
           <Form>
             <div className="_header">
               <img src={BackIcon} className="back_icon"/>
               <div  className="formLabel" style={{margin:"auto",fontSize:20}}>
-                Are you planning on getting vaccinated for COVID-19?
+                Which vaccine do you plan on getting?
               </div>
             </div>
   
             <Form.Check
               type="radio"
-              label="Yes"
+              label="Pfizer"
               id="Paypal"
               name="choice"
-              value="Yes"
-              checked
+              value="Pfizer"
+           
               //onChange={(e) => setPaymentMethod(e.target.value)}
               className="formCheck"
             ></Form.Check>
   
             <Form.Check
               type="radio"
-              label="No"
+              label="Moderna"
               id="Paypal"
               name="choice"
               value="No"
-              checked
+             
               //onChange={(e) => setPaymentMethod(e.target.value)}
               className="formCheck"
             ></Form.Check>
   
             <Form.Check
               type="radio"
-              label="Undecided"
+              label="Johnson & Johnson"
               id="Paypal"
               name="paymentMethod"
               value="Undecided"
-              checked
+         
               //onChange={(e) => setPaymentMethod(e.target.value)}
               className="formCheck"
             ></Form.Check>
+
+            <Form.Check
+              type="radio"
+              label="AstraZeneca"
+              id="Paypal"
+              name="paymentMethod"
+              value="AstraZeneca"
+          
+              //onChange={(e) => setPaymentMethod(e.target.value)}
+              className="formCheck"
+            ></Form.Check>
+
+            <Form.Check
+              type="radio"
+              label="Unsure"
+              id="Paypal"
+              name="paymentMethod"
+              value="Unsure"
+            
+              //onChange={(e) => setPaymentMethod(e.target.value)}
+              className="formCheck"
+            ></Form.Check>
+
           </Form>
   
-          <ProgressBar now={10} className="progressbar" />
+          <ProgressBar now={40} className="progressbar" />
         </div>
-        <div className="_next_btn_footer">
+        <div className="_next_btn_footertwo">
   
         <Button bsPrefix="buttonstyle"
         

@@ -25,14 +25,20 @@
 
 
  .headerClass{
-   
+    font-family: Avenir;
     margin-bottom: 5%;
+    color:#65c786
+
 }
+
+
 .buttonClass {
     margin-top: 5%;
     width: 325px;
     height: 47px;
     margin: auto;
+    background: #5DADEC;
+    box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.07);
     /* margin-left: 60px; */
 }
 

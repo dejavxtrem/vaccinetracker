@@ -9,6 +9,7 @@ const WelcomeScreenOne = ({history}) => {
 
 
   const nextButton = (e) => {
+    e.preventDefault()
     console.log('working')
     history.push("/onboardingTwo")
   }
@@ -23,7 +24,7 @@ const WelcomeScreenOne = ({history}) => {
       </div>
 
       <div className="formPrefix">
-        <Form>
+        <Form onSubmit={nextButton}>
           <div className="_header">
             <img src={BackIcon} className="back_icon"/>
             <div  className="formLabel" style={{margin:"auto",fontSize:20}}>
@@ -37,7 +38,7 @@ const WelcomeScreenOne = ({history}) => {
             id="Paypal"
             name="choice"
             value="Yes"
-            checked
+       
             //onChange={(e) => setPaymentMethod(e.target.value)}
             className="formCheck"
           ></Form.Check>
@@ -48,7 +49,7 @@ const WelcomeScreenOne = ({history}) => {
             id="Paypal"
             name="choice"
             value="No"
-            checked
+         
             //onChange={(e) => setPaymentMethod(e.target.value)}
             className="formCheck"
           ></Form.Check>
@@ -59,7 +60,7 @@ const WelcomeScreenOne = ({history}) => {
             id="Paypal"
             name="paymentMethod"
             value="Undecided"
-            checked
+       
             //onChange={(e) => setPaymentMethod(e.target.value)}
             className="formCheck"
           ></Form.Check>
@@ -75,13 +76,18 @@ const WelcomeScreenOne = ({history}) => {
        
        <div className="_next_btn_footer">
      
+       <Link  to='/onboardingTwo'>
+          
       <Button bsPrefix="buttonstyle"
-       type="button"
-       onClick={nextButton}
+       type="submit"
       >
-        Next
+       Next
         
     </Button>
+         
+         </Link>
+       
+ 
 
       </div>
        

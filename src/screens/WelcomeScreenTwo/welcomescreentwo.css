@@ -1,11 +1,114 @@
 
 
+.colOne {
+    display: flex;
+    justify-content: center;
+    direction: column;
+
+}
+
+
 .welcomeScreen {
  
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
+    
 
+}
+
+.formControl {
+    background-color:#F0F3FA;
+    height: 424.39px;
+    width: 814px;
+    position: absolute;
+    border-radius: 39px;
+
+}
+
+.formPrefix2 {
+    width: 814px;
+    height: 424.39px;
+    border-radius: 39px;
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0px 0px 10px gray;    
+    margin-top: 70.17px;
+    /* background: #F0F3FA; */
+}
+
+
+.formLabel {
+    /* margin-top: 21.48px; */
+    text-align: center !important;
+    /* padding-left: 40px !important; */
+    /* padding-right: 40px !important; */
+    /* display: flex; */
+    /* border-width: 1px solid red !important; */
+}
+
+div.formCheck {
+font-family: Avenir;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+align-items: center;
+margin-left: 200px;
+margin-top: 20px;
+
+}
+
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0px;
+    margin-right: 30px;
+}
+
+.displayOn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%
+
+}
+
+.progressbar {
+box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.15);
+border-radius: 39px;
+transform: matrix(1, 0, 0, -1, 0, 0);
+width: 539.19px;
+margin-top: 50PX;
+margin-left: 70PX;
+}
+
+.buttonstyle {
+    width: 76px;
+    color:grey;
+    margin-top: 40px;
+    border: none !important;
+    background-color: #A6A6A6;
+    border-radius: 5px;
+    
+}   
+
+
+._header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+.back_icon{
+    height: 30px;
+    width: 30px;
+}
+._next_btn_footertwo{
+    text-align: right;
+    width: 54%;
+    
+    /* width: 100% !important; */
 }

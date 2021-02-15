@@ -1,17 +1,45 @@
 import React , {useState, useEffect} from 'react'
 import FormContainer from '../../components/FormContainer'
 import {Container, Row, Col, Form, Button, Image} from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import './HomeScreen.css'
+import Loader from '../../components/Loader'
+import Message from '../../components/Message'
+
 import logo from './Finallogo.png'
+
+import { login } from '../../actions/userAction'
+
+
+
+
 const HomeScreen = ({history}) => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+
+    //use dispatch redux hook
+const dispatch = useDispatch()
+
+
+const userLogin = useSelector( state => state.userLogin)
+const { loading, error, userInfo} = userLogin
+
+
     const submitHandler = (e) => {
         e.preventDefault()
-        history.push("/onboardingOne")
+        dispatch(login(email, password))
+        
     }
+    useEffect(() => {
+        if (userInfo) {
+            history.push("/onboardingOne")
+        }
+    }, [history, userInfo])
+
+
+
 
     return (
 
@@ -21,6 +49,8 @@ const HomeScreen = ({history}) => {
 
          <Image src={logo} rounded  rounded className="_image"/>
         <h1 className="headerClass">Vaccine Tracker</h1>
+        { error && <Message variant='danger'>{error}</Message>}
+                {loading && <Loader/>}
             </div>
 
         <Form onSubmit={submitHandler} >
@@ -60,7 +90,6 @@ const HomeScreen = ({history}) => {
 
                     <Button
                     type="submit"
-                    variant='primary'
                     className="buttonClass"
                     >
                         Login In
